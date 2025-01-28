@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-'''
+
 def display_grid(grid):
     fig, ax = plt.subplots()
     ax.set_xticks(range(len(grid[0]) + 1))
@@ -16,7 +16,7 @@ def display_grid(grid):
 
     plt.gca().set_aspect('equal', adjustable='box')
     plt.show()
-'''
+
 def can_place(grid, block, row, col):
     for i in range(len(block)):
         for j in range(len(block[i])):
@@ -142,7 +142,7 @@ def main():
     if solve(grid, blocks, adj):
         print("\nSolution found!")
         print(grid)
-    
+        display_grid(grid)
     else:
         print("\n failed")
 
